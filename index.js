@@ -98,7 +98,6 @@ app.post('/create', uploadMiddleware.single('file') ,async (req,res)=>{
     const fileData = await fs.readFileSync(req.file.path)
     // console.log(fileData);
     const binary = Buffer.from(fileData)
-    // console.log(binary);
     // const parts = originalname.split('.');
     // const ext = parts[parts.length-1]
     // const newPath = path+'.'+ext
