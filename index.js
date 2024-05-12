@@ -34,7 +34,7 @@ async function connectToDatabase() {
 connectToDatabase();
 
 const app = express();
-app.use(cors({credentials:true, origin:'https://shishir-11.github.io'}));
+app.use(cors({credentials:true, origin:['https://shishir-11.github.io','https://server-production-359e.up.railway.app']}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads',express.static(__dirname+'/uploads'));
