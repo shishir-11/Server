@@ -18,7 +18,7 @@ const secretKey = process.env.SECRET_KEY
 const mongodbuser = process.env.MONGO_DB_USER
 const mongodbpass = process.env.MONGO_DB_PASSWORD
 const uri = `mongodb+srv://${mongodbuser}:${mongodbpass}@cluster0.q4kkbqi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
-const port= 4000;
+const port= process.env.PORT || 4000;
 const salt = bcrypt.genSaltSync(saltRounds);
 
 async function connectToDatabase() {
